@@ -644,6 +644,7 @@ header {
 
 .giude{
     z-index: 3;
+    width: 50%;
 }
 
 .giude>input{
@@ -824,6 +825,9 @@ footer li{
 
     .media-container{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .giude{
+        width: 100%;
     }
 }
 
