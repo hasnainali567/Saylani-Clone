@@ -7,6 +7,7 @@
 
 html {
     font-size: 16px;
+    position: relative;
 }
 
 body {
@@ -17,13 +18,16 @@ body {
 }
 
 .header-container {
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: #ffff;
     box-shadow: 0px 1px 2px #c7c7c7;
+    z-index: 999;
 }
 
 header {
-    position: sticky;
-    top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -522,6 +526,8 @@ header {
     row-gap: 20px;
 }
 
+
+
 .date-ribon{
     position: absolute;
     top: 10px;
@@ -532,6 +538,7 @@ header {
     border-radius: 3px;
     padding-block: 2px;
     padding-inline: 8px;
+    z-index: 99;
 }
 
 .date-ribon>p{
@@ -543,12 +550,23 @@ header {
 }
 
 .media-vid{
+    position: relative;
     height: 250px;
     display: flex;
     justify-content: center;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     overflow: hidden;
+}
+
+.play-btn{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, .4);
 }
 
 .media-vid>img{
@@ -605,7 +623,55 @@ header {
 }
 
 
+.guide-sec{
+    width: 100%;
+    background-color: #0d6db7;
+    position: relative;
+    z-index: 1;
+}
 
+.guide-sec::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 1);
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://saylaniwelfare.com/static/media/guide_back.3a5127e910c15a49f875.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+
+.giude{
+    z-index: 3;
+}
+
+.giude>input{
+    color: #eee;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+
+.giude>input::placeholder{
+    color: #dddd;
+}
+
+
+.giude>button{
+    border-radius: 5px;
+    background-color: #ffff;
+    border: none;
+    font-weight: 500;
+}
 
 
 
