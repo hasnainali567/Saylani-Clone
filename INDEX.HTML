@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- 916801-900 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAYALNI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ae99efb87b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="uper-container">
+        <div class="uper-icon d-flex d-md-none justify-content-center p-2">
+            <i class="fa-solid fa-arrow-circle-down" aria-hidden="true"></i>
+        </div>
+        <div class="upper-nav container d-none d-md-flex align-items-center justify-content-between py-2">
+            <div class="left">
+                <div class="left-infos">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <p class="m-0">info@saylaniwelfare.com</p>
+                </div>
+                <div class="left-infos">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p class="m-0">021-111-111-111</p>
+                </div>
+                <div class="left-infos">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    <p class="m-0">+9235638294562</p>
+                </div>
+                <div class="left-infos">
+                    <div class="info-visit">
+                        <p class="m-0">visit our other websites:</p>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEXUlEQVR4nO2Yj09TVxTH+0/NCTKKOCUoKBTZpPwQZUwCbChxZrgYolkIicRsI8vi5rZs7mfCzH6VgdMMgQGR8aMi/gKFMUv7Xkv7XmlL+9q+73Lv6ys8Hq8tUp1Z3je5aZr0nnM/99x77jk1GHTp0qVLly5dz4GiHIe1WglG8Pl3D/By6W8wFltSHrJsGS8ohqzN2DIWW5B7sBudn07Dx/nh/eQiFrN3UHsqAHv+bvh/+QkQRQXIgs2HE60j/wlA4+khPJz3Ijg8BOZgsWQrcxs8755TA8iO2CNVEO7eUUAQpt6+xyiq/v2ZABRWXkXXr3MQWAbus61xG2xlGULWSWpHBRC42gNHQb7046zt4D94D2LArwBZ9gk0nDtLup8KQI7Jgrb3J8G5A1j+5iss5hrpXPJJviMSidtRAVzumkXI6wP/YSdsO16kEwmQv3t1UbKm73tQ0zyQVoDXmgeo3dDkBNiKsvi8pZMnEHHYFf6FcFQNQIyY6//AzQkWwswDOGuPxo24GuoQnp9TGImKIn7u/Rt7y3u3BJBX1oOvr8xC8PDgLnSsbl5JEVaGBlWbN3l7CYffvLExgDxa2kbBOgN098nlpmHMzqTREUMhhUGXO0jD/iQALW2jYFjZzx7Jz0sZG/pZ8kh+yDEjcxMCkEF2llyksIdT7AzJBiQrrNfElAtVb9xICUAR6ddrlJGeU0eaJJDCKmUCSQogj5o1Z5MpP5TwbIYjYlIA8rYE+dhdy9qe8K7df8ih7tSfG64rZYD12cH3/bdY3CVnh2x4L30MURBUzrUAVgb64SgqiGc77kIHRJ9v09lOBYA0SwsgXTL87wBs6xw+78OgA2ToEUBaj1C6L5mehZIo5YdsX4VUm0ejykYnvLAAV1NjfKeddbUQZmeSRmB4jFUtJjQxDsb8quKVDzsYWkLsP7xxD5ISQOv5cbg5ZVElBoP09ZVbO3veLvo6O51++lonA5CLOAcbUNoNh6VXPtYD2HfvpN95Pii9yqbu1AEqGvrwl9Wp2qmVwQE4Sg5Ii8rcRrslweWmEco3S2V1KgC0jD7UQ+siUtuvVYRl4T79dnweW1WO0O0pWKeXUN3UnxggoVFFa2dGaOoWbt1x48jx/i31AxWNfRizutSbRWom037NzVIBkLDaGY2wrineli9/oRnWJ+3IckwWtHdawfHJj6v/xytwsP7kaTQ0PgbG/Ep8Ae4z7yDMsvRiHdC4WFvtiQsqNRLGo0dw1h9bTRj1x7QBojwPT3sbDRv5MVNqQnBkGLNzPBpahhIuYKsAxtioPTmIuzPK/6mIAtevwb4vT+Mhi0bh+6EL9j250nHJyYL3s0sIeAO4+OU9+gdTKs7TAWAsttDj2fHRFHz+sAIi6vWCO9+uBnDWVK/m4ebjiNgeY2iUQWnt9ZSdphPAGBumo9fosV0vFQBx4ijcS1s7m92Pt87d3LSzpwFgjI2mMyOY/2dZG0CXLl26dOnSZXj2+hdh4D9R4Q/X/wAAAABJRU5ErkJggg=="
+                            alt="" height="20px">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA+klEQVR4nO2VrQoCQRSFx5eybhAWtmkSxGLWJzD4ACbrWn0FFxQVDGKzCQo2g2lAFydZruyCFg3uMr/O+eDA3HYP9565jAEAAADAMERUCRoJyZaoVZWJ/aWBqDWn0Xj/bqBo3etvcxkxEDZndDjdKGMw3FHRut1dU3p/5MremQF+TZWJfZtAPDnSanOhemdJZerp4pzrNQHtBgLJMmIgkpgD7SEOJefAyDcaS8yB83eA685AJPkOaDUQ4g4kH3fA+QwIGKj+PgGVgdMSYm5BU9xrA0Jh4LT8QsKCpoTXBrgFe829DjF33YCwYK+F1yEWLhsAAAAAAGCleAKWmufwwWk9CQAAAABJRU5ErkJggg=="
+                            alt="" height="20px">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABU0lEQVR4nO2VP0sDMRjGD4o6iyDo5Kr0A4jlOC0O0iLWwanQ0Toogrr004iLuKoIdXIQP4VScY/Vuy3p3T0Si38GgzVFLyfPAy+EJC/JL++feB5FURRF/QfB9zCIiafwVw0D3oMAghEImUIsYvFNHUTtY0Rnh/nsQo8PHSSrk0irE+h2bvMDoHaXEV5fQLZq7z56rOf0mvMAydqU0TepTbsPENdnjb5xfc59ANVcMPqqrZK7AGo7QHR5ArlfMfrKgyqeb9qQeyvuASAo9PcsjRh90/JYfxwU3ACQnzqNrcnWenYAb73e9vKp/iPu77JNIf3b2gJE50fZppAuSLWzaA3Q25xHeHVKgKFSyCYSX728yLqN/uRwJz8yoQ8vjyKtjCPemEGvUfx48UbxdU6v6T3OAgjDZWx8QAB/+AjYGFyKAAF8RsBjCom/KmKKoiiK8nKoFz8f4JiFDf/dAAAAAElFTkSuQmCC"
+                            alt="" height="20px">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB1klEQVR4nO2WT0gUYRiHZxM9JKgQGCEeCsGrmhgUs5IgbQRLFJSQp91M7BZtF/Hin8NCEIG4oh3aDhHioT9EBqJ1MmqpDmJ7ywWhQhMjtUW33UemUT/3tCO1zoy9D3yHZeZ7eZ95f9/saJogCIIg7AfQNdy0NBHQZQJIhHZidySQQ6xbeAoXK+F+N8TfweI3WP0JiU/wZBDa6h08Aa8H7nXBWpI/pNMw/hBunoGzZeb1CxVwutCBAl4PjEXZ5vsX6DjpojMQuaWaX16CK9W2N49lAX85/FpWAuFA7uLGnj2IkmZJoP+Gan5+DhoLchdvPwGPbqvfzcU2Crx5oQSeDlkrfq0BMhmI9sDUczOCtgnMziiBXI2cOwThIHx4pfZ8fG1taroTBC4fg4EQxGNqT2wcGg/YKPD2pWrmccRa8avHzftH7sD7CZsjNBBSAl8T1p5msC77vPhKbRQ4fwSSK0qitzV3cf9haD6Yl6bZtYCxhjuVwI8FuHQ0783xTwWM2EyOZEcpUOMiAX1T4kEfpNZNid8peDYM109BU5F5j68kb69M/lpga7VUmf+yn6chuWp+lRoTGb0LgVoHT0B33tJEQJcJIBHaid2R4L8/xIIgCIKguZANPKAGeS46VvoAAAAASUVORK5CYII="
+                            alt="" height="20px">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <button>English</button>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <header class="container">
+
+            <div class="header-left">
+                <img src="https://saylaniwelfare.com/static/media/logo_saylaniwelfare.22bf709605809177256c.png"
+                    alt="logo">
+            </div>
+            <div class="header-right">
+                <ul>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Media</li>
+                    <li>Contact US</li>
+                    <li>Bank details</li>
+                    <li>Other websites</li>
+                </ul>
+                <div class="header-btn d-none d-md-flex">
+                    <button>
+                        DONATE NOW
+                    </button>
+                    <BUtton>
+                        BE A SPONSOR
+                    </BUtton>
+                </div>
+                <div class="bars-icon d-flex d-md-none">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <main class=" container">
+        <section class="hero d-sm-flex mb-3">
+            <div class="hero-left">
+
+                <h1>Welcome to the <span style="color: #8dc63f;">Saylani</span> Welfare<br>
+                    Non Governmental Organization in Pakistan</h1>
+                <h3>The largest NGO offering free <span style="color: #0d6efd;">Daily Meals!</span></h3>
+                <p>
+                    Saylani Welfare is on the ground and already working with local communities to assess how best to
+                    support underprivileged families in more than 63 areas of day to day lives.</p>
+                <button class="py-2 px-3 py-md-3 px-md-5">Explore moer <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="hero-right d-none d-sm-block px-3 px-lg-5">
+                <img src="https://saylaniwelfare.com/images/cloudinaryImages/slides.webp" alt="">
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="img-slide-sec">
+            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1721909453/website-images/dynamic/692fbdfa-20b6-4f0b-9c59-778cca7ba0b5.jpg"
+                alt="">
+        </section>
+
+
+        <section class="doing-sec">
+            <h1>What We Are Doing</h1>
+            <div class="doing-con">
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image1.webp" height="70px">
+                    <p>Welfare</p>
+                </div>
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image2.webp" height="70px">
+                    <p>Medical</p>
+                </div>
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image3.webp" height="70px">
+                    <p>Online Sadkah</p>
+                </div>
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image4.webp" height="70px">
+                    <p>Clean Water</p>
+                </div>
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image5.webp" height="70px">
+                    <p>Education</p>
+                </div>
+                <div class="do-boxes d-flex flex-column align-items-center justify-content-center">
+                    <img src="https://saylaniwelfare.com/images/cloudinaryImages/services-image6.webp" height="70px">
+                    <p>Food</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sponsor-sec">
+            <div class="sponsor-boxes">
+                <h5>Daily Food</h5>
+                <button>Donate</button>
+            </div>
+            <div class="sponsor-boxes">
+                <h5>Sponsor Vocationals Student</h5>
+                <button>Donate</button>
+            </div>
+            <div class="sponsor-boxes">
+                <h5>Sponsor IT Students</h5>
+                <button>Donate</button>
+            </div>
+
+        </section>
+
+
+        <sctionn class="project d-flex">
+            <div class="project-left d-flex align-items-center justify-content-center">
+                <div class="project-left-img">
+                    <img src="images/2178912-image-1584559620.jpg">
+                    <div class="left-img-box">
+                        <div class="left-img-boxes project-green">
+                            <p>Saylani serve almost 300,000 underprevillaged on daily basis</p>
+                        </div>
+                        <div class="left-img-boxes"></div>
+                        <div class="left-img-boxes"></div>
+                        <div class="left-img-boxes"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-right">
+                <h2>Other Projects</h2>
+                <div class="projects">
+                    <div class="project-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/projects-image1.webp" height="44px"
+                            width="44px">
+                    </div>
+                    <div class="project-text">
+                        <h5>Hepatitis</h5>
+                        <p>Saylani Welfare has also set up a clinic for the best treatment of hepatitis patients where
+                            hepatitis patients are being treated</p>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="project-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/projects-image2.webp" height="44px"
+                            width="44px">
+                    </div>
+                    <div class="project-text">
+                        <h5>Housing Society</h5>
+                        <p>Saylani Welfare is also providing its own home facility for the homeless people. So far,
+                            thousands of houses and flats have been constructed and given in easy installments
+                        </p>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="project-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/projects-image3.webp" height="44px"
+                            width="44px">
+                    </div>
+                    <div class="project-text">
+                        <h5>IT Literacy</h5>
+                        <p>We are committed to developing more than 1 million software developers, which will add about
+                            100 billion annually to Pakistan's economy and help ease the debt burden on Pakistan</p>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="project-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/projects-image4.webp" height="44px"
+                            width="44px">
+                    </div>
+                    <div class="project-text">
+                        <h5>Tharparkar</h5>
+                        <p>In Tharparkar, Saylani has set up several schools and ro plants, dug wells and brought the
+                            children there to Karachi and taught them modern technology
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </sctionn>
+
+        <section class="service-counter-sec">
+            <div class="service-counter">
+                <div class="counter-box">
+                    <div class="counter-box-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/counters-image1.webp" height="50px"
+                            width="50px">
+                    </div>
+                    <div class="counter-box-text">
+                        <h2>300000</h2>
+                        <p>Food</p>
+                        <p>(Daily)</p>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-box-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/counters-image1.webp" height="50px"
+                            width="50px">
+                    </div>
+                    <div class="counter-box-text">
+                        <h2>300000</h2>
+                        <p>Food</p>
+                        <p>(Daily)</p>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-box-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/counters-image1.webp" height="50px"
+                            width="50px">
+                    </div>
+                    <div class="counter-box-text">
+                        <h2>300000</h2>
+                        <p>Food</p>
+                        <p>(Daily)</p>
+                    </div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-box-img">
+                        <img src="https://saylaniwelfare.com/images/cloudinaryImages/counters-image1.webp" height="50px"
+                            width="50px">
+                    </div>
+                    <div class="counter-box-text">
+                        <h2>300000</h2>
+                        <p>Food</p>
+                        <p>(Daily)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="say-sec d-flex flex-column gap-3 mb-5">
+            <div class="say-text">
+                <p class="m-0 my-2 p-0 text-center" style="color: #8dc63f;">Our Testimonials</p>
+                <h2 class="m-0 mb-4 p-0 text-center">What They Say?</h2>
+            </div>
+
+            <div class="testimonial p-5 d-flex flex-column align-items-center">
+                <img src="https://saylaniwelfare.com/images/cloudinaryImages/testimonials-image1.webp" height="100px"
+                    width="100px">
+
+                <h4 class="m-0 mt-2 p-0" style="color: #0d6db7;">Arshad Wali Muhammad</h4>
+                <p class="my-1">(Group Director, Gerry’s Group)</p>
+                <p class="text-center">Saylani Welfare Trust is a name that needs no introduction today. The journey
+                    this team embarked upon was made possible owing to their zeal, enthusiasm & commitment to the
+                    society and by the grace of Allah (SWT), it has become a name that we need and not just the one we
+                    want. I wish Saylani’s team all the success and blessing that they deserve for future, May God bless
+                    Saylani and ensure prosperity and happiness for our people, Ameen!</p>
+                <div class="test-btn d-flex justify-content-center gap-3">
+                    <div class="img-slider-btn">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="img-slider-btn">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                            height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="media-sec">
+            <h2>Media Updates</h2>
+            <div class="media-container">
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Multiply Your Blessings This Ramadan – Donate to Saylani | Faysal Quraishi</h5>
+                        <p>#Charity #Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Saylani Entrepreneurship Certificate Program | IBA - Institute of Business Administration
+                        </h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Empowering Pakistan's Tech Future with Saylani's SMIT Program | Gitex Global</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Learn Turkish Language with Saylani | Enroll Now</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>
+                            System Design & Architecture Course | Saylani Mass IT Training | Zaitoon Ashraf IT Park by
+                            Saylani</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Mobile on easy installment | Maulana Bashir Farooq Qadri</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Saylani Welfare's REVOLUTIONARY Approach to Saving the Planet in 2024</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="date-ribon">
+                        <p>Mon Feb 17 2025</p>
+                    </div>
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739778712/website-images/dynamic/1dc54952-2bce-4ac9-a857-f392a168fe29.png"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <h5>Saylani's 2024 Documentary | Shining Light Through Countless InitiativesMultiply Your
+                            Blessings This Ramadan – Donate to Saylani | Faysal Quraishi</h5>
+                        <p>#Organisation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-sec">
+            <h2 class="my-5 text-center">News</h2>
+            <div class="media-container">
+                <div class="media ">
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739779229/website-images/dynamic/51e53916-81e2-49af-8620-b723bf545ba1.jpg"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <button class="btn-1">Fri Feb 07 2025</button>
+                        <h5>Javed Alam Odho, Additional IG Karachi, at Saylan...</h5>
+                        <button class="btn-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg></button>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739779229/website-images/dynamic/51e53916-81e2-49af-8620-b723bf545ba1.jpg"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <button class="btn-1">Fri Feb 07 2025</button>
+                        <h5>Javed Alam Odho, Additional IG Karachi, at Saylan...</h5>
+                        <button class="btn-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg></button>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739779658/website-images/dynamic/656fd803-7c00-4130-90c0-1a12d4900a0e.jpg"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <button class="btn-1">Fri Feb 07 2025</button>
+                        <h5>Javed Alam Odho, Additional IG Karachi, at Saylan...</h5>
+                        <button class="btn-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg></button>
+                    </div>
+                </div>
+                <div class="media ">
+                    <div class="media-vid">
+                        <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1739779229/website-images/dynamic/51e53916-81e2-49af-8620-b723bf545ba1.jpg"
+                            alt="">
+                    </div>
+                    <div class="media-text">
+                        <button class="btn-1">Fri Feb 07 2025</button>
+                        <h5>Javed Alam Odho, Additional IG Karachi, at Saylan...</h5>
+                        <button class="btn-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg></button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
