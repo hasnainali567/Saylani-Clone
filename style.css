@@ -500,6 +500,7 @@ header {
 .img-slider-btn:nth-child(2){
     background-color: #8dc63f;
     color: #ffff;
+    transform: scale(1.05);
 }
 
 .media-sec{
@@ -552,6 +553,8 @@ header {
 
 .media-vid>img{
     width: 100%;
+    object-fit: fill;
+    object-position: center;
 }
 
 
@@ -579,6 +582,7 @@ header {
 
 .news-sec .media-text{
     background-color: #eeeeee;
+    padding: 20px;
 }
 
 .media-text > .btn-1{
@@ -591,7 +595,7 @@ header {
 }
 
 .news-sec .media-text>h5{
-    margin-block: 8px;
+    margin-block: 10px;
 }
 .media-text > .btn-2{
     border: none;
@@ -599,6 +603,20 @@ header {
     border-radius: 5px;
     background-color: #ffff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1220px) {
     header {
         padding: 10px;
