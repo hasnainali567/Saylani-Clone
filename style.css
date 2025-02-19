@@ -360,6 +360,12 @@ header {
 
 .left-img-boxes:nth-child(2){
     border-bottom: none;
+    border-left: none;
+}
+
+.left-img-boxes:nth-child(3){
+    border-right: none;
+    border-top: none;
 }
 
 .project-green {
