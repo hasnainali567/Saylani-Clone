@@ -734,10 +734,19 @@ footer li{
 
 
 
+.giude>input:focus{
+    border: none;
+}
 
 
+.footer-copyright{
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+}
 
-
+.footer-ip{
+    border-bottom: 1px solid #666666;
+}
 
 
 
@@ -829,6 +838,7 @@ footer li{
     .giude{
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 576px) {
